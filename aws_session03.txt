@@ -53,6 +53,8 @@ destination -> destination
 cp <source> <destination>
 cp aws.txt devops/
 cp linux.txt devops/linux-readhat.txt
+cp aws_session02.txt aws_session03.txt repos/daws-88s/
+
 
 mv -> rename or  move the file
 mv <source> <destination>
@@ -142,3 +144,14 @@ Tomorrow's session
 ===================
 vim editor
 user management
+
+
+GIT Config to Git Bash:
+------------------------
+
+git config --global user.name "Your Name"
+git config --global user.email "your_email@example.com"
+
+git config --list
+
+Sigin with code and activate with Password
