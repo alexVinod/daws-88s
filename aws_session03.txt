@@ -155,3 +155,9 @@ git config --global user.email "your_email@example.com"
 git config --list
 
 Sigin with code and activate with Password
+
+
+git add .
+git status
+git commit -m "Updated Session03.txt file"
+git push origin main
