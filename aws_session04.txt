@@ -189,3 +189,7 @@ userdel -r rameh -> remove user ramesh and his home directory
 id ramesh
 id: ‘ramesh’: no such user
 
+How to delete group:
+=====================
+groupdel <group-name>
+groupdel deveops
