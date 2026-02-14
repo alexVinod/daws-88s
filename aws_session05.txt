@@ -156,3 +156,114 @@ How to give Admin access to devops group:
 	
 	chmod 400 devops -> Permission is set to 400 -> R--
 	
+
+Package Management:
+=======================
+yum -> old rhel
+dnf -> latest
+Ubuntu -> apt-get or apt install
+
+dnf install <package-name>
+/etc/yum.repos.d/  -> all URLS are configured
+
+Linux created by Linus Torvalds, he developd linux kernel from the scratch using c language... he invented git also...
+
+Readhat -> commands + apps -> Redhat flavour/distribution -> CentOS/Fedora
+Reahat family = redhat = centos = fedora = aws linux
+Ubuntu
+Oracle
+Suse
+IBM
+
+1. community edition -> free
+2. enterprise edition -> support redhat
+
+
+sudo su -
+dnf install nginx -y -> it installs 'nginx' package from amazon Repository
+cd /etc/yum.repos.d/
+ls -l
+-rw-r--r--. 1 root root 1028 Jan 28 22:24 amazonlinux.repo
+-rw-r--r--. 1 root root  729 Jan 28 22:24 kernel-livepatch.repo
+
+cat amazonlinux.repo -> can see package info in this path /etc/yum.repos.d/
+
+dnf remove nginx -y -> remove installed package
+
+dnf list installed  -> Installed packages list
+dnf list available  -> Available list to install
+dnf search python   -> search packages related to python
+
+If Package is not avalible for install and need to get it sperately then:
+-------------------------------------------------------------------------
+cd /etc/yum.repos.d/
+ls -l
+
+sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/rpm-stable/jenkins.repo
+sudo dnf upgrade
+# Add required dependencies for the Jenkins package
+sudo dnf install fontconfig java-21-openjdk
+sudo dnf install jenkins
+sudo systemctl daemon-reload
+
+
+
+sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/rpm-stable/jenkins.repo
+	
+cat jenkins.repo
+dnf install jenkins -y
+dnf remove jenkins -y
+
+
+
+Service Management:
+======================
+0-65535 -> This many ports contains in System
+
+https://facebook.com
+
+ssh facebook.com 
+port 22 sshd service is running
+
+sshd -> d -> daemon
+
+1. get the facebook.com IP address
+2. connect to the service running on port 443
+https ->443
+
+Delhi -> Hyderabad
+HYD pincode -> HYD central office
+Street name -> Street
+Appartment name -> Appartment
+Flat number -> Flat
+
+systemctl start <service-name>
+systemctl restart <service-name>
+systemctl status <service-name> -> check service is running or not
+systemctl enable <service-name>
+systemctl disable <service-name>
+systemctl stop <service-name>
+
+This operations can perform on only services which can provide responses for online users.
+
+nginx -> http/webserver -> we can host HTML applications
+systemctl start nginx
+systemctl enable nginx
+systemctl status nginx
+
+http://54.163.8.211:80
+
+systemctl stop nginx
+
+
+Network Management:
+=======================
+netstat --help -> Can get help
+netstat -lntp  -> Network Statistics
+		-lntp	   -> Listening Numeric TCP Program
+		
+
+netstat -lntp -> check port is running or not and accessible to internet
+
